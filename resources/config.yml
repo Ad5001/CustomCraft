@@ -1,0 +1,17 @@
+---
+# Welcome to custom craft config.
+# It isheree for you to choose custom craft.
+# You can as well use datavalues with a ":" BUT you will need to make the item in two " !
+# The three rows are opened with [ and closed with ]
+# Each row take 3 items, separeted by a coma and a space.
+# here is how you make an item: ["id:damage", count (optional), "data tags (optional) (in json)"]
+# The result is only one item.
+# This is an example of customcraft:
+# It takes one water at the center (id 8), a bucket (id 325) and air (id 0) everywhere else at the bottom and it craft a water bucket called Example.
+1:
+  shape:
+        - [[0], [0], [0]]
+        - [[0], [8], [0]]
+        - [[0], ["325:0"], [0]]
+  result: ["325:8", 1, '{"display":{"Name":"Example"}}']
+...

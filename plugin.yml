@@ -1,0 +1,9 @@
+---
+name: CustomCraft
+author:  Ad5001
+version: 1.1
+api: [3.0.0, 3.0.0-ALPHA4]
+main: Ad5001\CustomCraft\Main
+commands: []
+permissions: []
+...
