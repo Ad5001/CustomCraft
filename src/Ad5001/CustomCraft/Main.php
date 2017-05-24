@@ -35,7 +35,7 @@ class Main extends PluginBase{
     
     
     public function getItem(array $item) : Item {
-        $result = Item::get((int) $item[0]);
+        $result = Item::fromString($item[0]);
         if(isset($item[1])) {
         	$result->setCount((int) $item[1]);
         }
