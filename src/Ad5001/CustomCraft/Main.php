@@ -3,7 +3,7 @@ namespace Ad5001\CustomCraft;
 use pocketmine\plugin\PluginBase;
 use pocketmine\inventory\ShapedRecipe;
 use pocketmine\item\Item;
-use pocketmine\nbt\NBT;
+use pocketmine\nbt\JsonNBTParser;
 
 
 class Main extends PluginBase{
@@ -43,7 +43,7 @@ class Main extends PluginBase{
             $tags = $exception = null;
             $data = $item[2];
 			try{
-				$tags = NBT::parseJSON($data);
+				$tags = JsonNBTParser::parseJSON($data);
 			}catch (\Throwable $ex){
 				$exception = $ex;
 			}
