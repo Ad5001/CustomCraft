@@ -12,7 +12,7 @@ class Main extends PluginBase{
    public function onEnable(){
         foreach($this->getConfig()->getAll() as $craft) {
             $result = $this->getItem($craft["result"]);
-            $rec = new ShapedRecipe($result, ["abc","def","ghi"], [
+            $rec = new ShapedRecipe(["abc","def","ghi"], [
 		    "a" => $this->getItem($craft["shape"][0][0]),
 		    "b" => $this->getItem($craft["shape"][0][1]),
 		    "c" => $this->getItem($craft["shape"][0][2]),
@@ -22,7 +22,7 @@ class Main extends PluginBase{
 		    "g" => $this->getItem($craft["shape"][2][0]),
 		    "h" => $this->getItem($craft["shape"][2][1]),
 		    "i" => $this->getItem($craft["shape"][2][2]),
-	    ]);
+	    ], [$result]);
             $this->getServer()->getCraftingManager()->registerRecipe($rec);
             $this->getLogger()->info("Registered recipe for " . $this->getItem($craft["result"])->getName());
         }
